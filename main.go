@@ -11,13 +11,12 @@ import (
 	"os"
 )
 
-const fileDir = "/Users/ferhat.ozcullu/go/src/notion-english-csv-parser/"
-
 func main() {
 	var typeFlag = flag.Int("t", 1, "0 vocabulary, 1 quizlett")
 	var quantityFlag = flag.Int("q", 10, "word quantity for export")
 	flag.Parse()
-	f, err := os.Open(fileDir + "file.csv")
+
+	f, err := os.Open("C:\\Users\\ozcol\\Desktop\\repos\\vocabulary-csv-parser\\file.csv")
 
 	if err != nil {
 		log.Fatal(err)
